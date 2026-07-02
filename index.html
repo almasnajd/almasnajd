@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة ألماس نجد | لقطع غيار الشاحنات الثقيلة</title>
+    <style>
+        /* التنسيقات العامة */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f7f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        /* الهيدر والقائمة */
+        header {
+            background-color: #0f172a; /* كحلي غامق فخم */
+            color: #fff;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid #d4af37; /* لون ذهبي ألماسي */
+        }
+        .logo h1 {
+            color: #d4af37;
+            font-size: 24px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #d4af37;
+        }
+        /* الواجهة الرئيسية */
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://unsplash.com') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 19px;
+            margin-bottom: 25px;
+            color: #cbd5e1;
+            max-width: 700px;
+        }
+        .btn {
+            background-color: #d4af37;
+            color: #0f172a;
+            padding: 14px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        .btn:hover {
+            background-color: #fff;
+            color: #0f172a;
+        }
+        /* الأقسام والمنتجات */
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 30px;
+            color: #0f172a;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #d4af37;
+            margin: 10px auto 0;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            border-top: 5px solid #0f172a;
+            transition: 0.3s;
+        }
+        .card:hover {
+            border-top-color: #d4af37;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .card h3 {
+            margin-bottom: 15px;
+            color: #0f172a;
+            font-size: 20px;
+        }
+        .card p {
+            color: #64748b;
+            font-size: 15px;
+        }
+        /* تصميم فروع الشركة */
+        .branches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .branch-card {
+            background: #1e293b;
+            color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            border-right: 5px solid #d4af37;
+            text-align: right;
+        }
+        .branch-card h4 {
+            color: #d4af37;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        .branch-card p {
+            margin: 8px 0;
+            color: #e2e8f0;
+            font-size: 16px;
+        }
+        .branch-card a {
+            color: #fff;
+            text-decoration: none;
+            background: #334155;
+            padding: 4px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .branch-card a:hover {
+            background: #d4af37;
+            color: #0f172a;
+        }
+        /* اتصل بنا */
+        .contact-section {
+            background-color: #0f172a;
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        /* الفوتر */
+        footer {
+            background-color: #090d16;
+            color: #64748b;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            border-top: 1px solid #1e293b;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر القائمة العلوية -->
+    <header>
+        <div class="logo">
+            <h1>💎 شركة ألماس نجد</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#parts">أقسام المنتجات</a></li>
+                <li><a href="#branches">فروعنا</a></li>
+                <li><a href="#about">لماذا نحن؟</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- الواجهة الرئيسية -->
+    <section class="hero" id="home">
+        <h2>أصالة القطع وقوة الأداء لشاحنتك</h2>
+        <p>مرحباً بكم في شركة ألماس نجد. خياركم الأول لقطع غيار الشاحنات الثقيلة والمعدات (مرسيدس، فولفو، سكانيا، مان) بجودة ألماسيّة تضمن سلامة أسطولكم.</p>
+        <a href="#branches" class="btn">تواصل مع أقرب فرع إليك</a>
+    </section>
+
+    <!-- أقسام قطع الغيار -->
+    <section class="container" id="parts">
+        <h2 class="section-title">أقسام منتجاتنا في ألماس نجد</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>⚙️ أجزاء المحركات والجيربوكس</h3>
+                <p>بستونات، وجيه، فلاتر، ومضخات ديزل أصلية وعالية الجودة لضمان العزم الأقصى للشاحنة.</p>
+            </div>
+            <div class="card">
+                <h3>🛑 مكابح ومنظومات فرامل</h3>
+                <p>فحمات، ديسكات، وهوبات فرامل ثقيلة ومقاومة لدرجات الحرارة العالية وظروف الطرق الوعرة.</p>
+            </div>
+            <div class="card">
+                <h3>🔋 أنظمة كهربائية وإلكترونية</h3>
+                <p>ديناموهات، سلفات، كمبيوترات شاحنات، وحساسات متوافقة تماماً مع معايير المصانع العالمية.</p>
+            </div>
+            <div class="card">
+                <h3>⛓️ نظام التعليق والمحابيس</h3>
+                <p>مساعدات، سست، ومحاور متينة مصممة بدقة لتحمل الحمولات والأوزان الفائقة.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الفروع المحدث -->
+    <section class="container" id="branches">
+        <h2 class="section-title">فروعنا وأرقام التواصل</h2>
+        <div class="branches-grid">
+            
+            <!-- فرع الرياض -->
+            <div class="branch-card">
+                <h4>📍 الفرع الرئيسي - الرياض</h4>
+                <p>اتصال أو واتساب مباشر:</p>
+                <p>📞 <a href="tel:058485601">058485601</a></p>
+                <p>📞 <a href="tel:0564424890">0564424890</a></p>
+            </div>
+
+            <!-- فرع الخرج -->
+            <div class="branch-card">
+                <h4>📍 الفرع الثاني - الخرج</h4>
+                <p>اتصال أو واتساب مباشر:</p>
+                <p>📞 <a href="tel:0561683511">0561683511</a></p>
+            </div>
+
+            <!-- فرع حفر الباطن -->
+            <div class="branch-card">
+                <h4>📍 الفرع الثالث - حفر الباطن</h4>
+                <p>اتصال أو واتساب مباشر:</p>
+                <p>📞 <a href="tel:0563172125">0563172125</a></p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- معلومات عن الشركة -->
+    <section class="container" id="about" style="text-align: center; background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+        <h2 class="section-title">لماذا تختار ألماس نجد؟</h2>
+        <p style="max-width: 800px; margin: 0 auto; font-size: 18px; color: #475569;">
+            في <strong>شركة ألماس نجد لقطع غيار الشاحنات</strong>، نضع الجودة والسرعة كأولوية قصوى ونخدمكم عبر فروعنا الموزعة بطلب غيار شاحناتكم الأصلية وبدائلها المعتمدة ومكفولة، مع تقديم خدمات الدعم الفني لمطابقة القطع عبر <strong>رقم الشاصي (VIN)</strong> لضمان حصولك على القطعة الصحيحة من المرة الأولى.
+        </p>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>&copy; 2026 شركة ألماس نجد لقطع غيار الشاحنات. جميع الحقوق محفوظة.</p>
+    </footer>
+
+</body>
+</html>
